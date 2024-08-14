@@ -1,0 +1,46 @@
+---
+import BeneficiosCard from "./BeneficiosCard.astro";
+import cysFoto from "../../public/images/benef-tray.png";
+import atencionFoto from "../../public/images/atencion-personalizada.png";
+import cleasFoto from "../../public/images/cleas.png";
+import appFoto from "../../public/images/app.png";
+---
+
+<section
+  class="flex min-h-[60vh] w-full flex-col place-items-center gap-[10%] bg-[#006275] p-8 px-[20%] max-md:h-max max-md:min-h-[unset] max-md:gap-[4%] max-md:px-[5%]"
+>
+  <h2
+    class="text-4xl text-center uppercase font-semibold text-white max-md:text-2xl"
+  >
+    Beneficios de contratar con San Cristóbal
+  </h2>
+
+  <div
+    class="mt-[5%] flex w-full place-content-center place-items-center justify-center gap-4 max-lg:mt-4 max-lg:flex-col max-lg:gap-5 max-md:mt-8"
+  >
+    <BeneficiosCard
+      foto={cysFoto}
+      altFoto="manos entrelazadas"
+      title="Confianza y trayectoria"
+      description="Más de 80 años en el mercado asegurador Argentino. Contamos con una gran solvencia y trayectoria en el mercado asegurador y de servicios financieros."
+    />
+    <BeneficiosCard
+      foto={atencionFoto}
+      altFoto="atención al cliente"
+      title="Atención personalizada"
+      description="Somos productores de confianza, con años de experiencia en el área de seguros que te brindaremos siempre atención personalizada."
+    />
+    <BeneficiosCard
+      foto={cleasFoto}
+      altFoto="manos juntas"
+      title="CLEAS"
+      description="Formamos parte de Cleas, un convenio entre las principales aseguradoras del país que brinda más rapidez a la hora de denunciar un siniestro entre las compañías adheridas."
+    />
+    <BeneficiosCard
+      foto={appFoto}
+      altFoto="app de seguros"
+      title="Gestioná desde la APP"
+      description="Desde nuestra APP podés descargar tu póliza, denunciar siniestros, ver detalle de tu cuenta, y mucho más!"
+    />
+  </div>
+</section>

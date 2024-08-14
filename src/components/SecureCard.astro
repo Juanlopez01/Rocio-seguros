@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+
+const { foto, altFoto, buttonText, buttonHref, title, description } =
+  Astro.props;
+---
+
+<article
+  class="flex h-[150px] max-[490px]:h-[250px] max-w-[450px] rounded-xl bg-[#F3F2F2] mx-2 my-3 drop-shadow-xl shadow-black shadow-md"
+>
+  <div class="m-4 flex flex-col justify-between max-[490px]:items-center">
+    <h3 class="text-xl font-semibold">{title}</h3>
+    <h4 class="text-sm">
+      {description}
+    </h4>
+    <a
+      class="cursor-pointer bg-[#04ABCB] text-[#00282F] text-lg font-semibold px-6 py-1 max-w-fit rounded-3xl"
+      href={buttonHref}
+      target="_blank"
+    >
+      <span>{buttonText}</span>
+    </a>
+  </div>
+  <Image
+    src={foto}
+    alt={altFoto}
+    class="min-h-[100px] max-h-[150px] max-[490px]:hidden"
+    loading="lazy"
+  />
+</article>

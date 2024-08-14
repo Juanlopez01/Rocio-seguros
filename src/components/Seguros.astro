@@ -1,0 +1,104 @@
+---
+import SecureCard from "./SecureCard.astro";
+import autoSeguro from "../../public/images/seguro-auto-card.png";
+import hogarSeguro from "../../public/images/seguro-hogar-card.png";
+import motoSeguro from "../../public/images/seguro-moto-card.png";
+import accidentesSeguro from "../../public/images/seguro-acc-pers-card.png";
+import comercioSeguro from "../../public/images/seguro-comercio-card.png";
+import ahorrosSeguro from "../../public/images/seguro-ahorros-card.png";
+---
+
+<section
+  class="flex min-h-[60vh] w-full place-content-center place-items-center gap-[10%] bg-[#021F25] p-4 px-[20%] max-lg:flex-col max-lg:gap-[4%] max-lg:px-[5%]"
+>
+  <div
+    class="flex h-full flex-col gap-[5%] max-lg:mt-4 max-lg:gap-[3%] text-center"
+  >
+    <h2
+      class="primary-text-color text-4xl font-medium text-[#F3F2F2] uppercase max-md:text-3xl"
+    >
+      Nuestros seguros online
+    </h2>
+    <div
+      class="mt-6 text-justify flex flex-col lg:w-full min-[1400px]:grid min-[1400px]:grid-cols-2"
+    >
+      <SecureCard
+        foto={autoSeguro}
+        altFoto="seguro de auto"
+        buttonText="Hasta 30% off"
+        buttonHref="https://www.sancristobal.com.ar/pas/rj-seguros-generales/cotizar"
+        title="Seguro automotor"
+        description="¿Qué esperas para cotizar tu seguro automotor online y al mejor precio?"
+      />
+      <SecureCard
+        foto={hogarSeguro}
+        altFoto="seguro de hogar"
+        buttonText="Más información"
+        buttonHref="https://www.sancristobal.com.ar/pas/rj-seguros-generales/seguro-hogar"
+        title="Seguros de hogar"
+        description="Los mejores seguros de hogar en Argentina, al mejor precio."
+      />
+      <SecureCard
+        foto={motoSeguro}
+        altFoto="seguro de moto"
+        buttonText="Más información"
+        buttonHref="https://www.sancristobal.com.ar/otros-riesgos/moto?token=njXRQnZo4tf5SyZuT3okfRtu7OjRng6AujHhiswLiPLFyZPZSkBgxDdooK_AISTvwx-FZzk4mQHUn7Y_3WE1UymxapPTf41ZXOfV-xxEpx-zZZ0XNIckk6RgGOd4Ub2HQG_QShMP448CVUTq8vviCDYqYIG-KYVTVKTTvI6xEmTV1ThyveBG7o8cCuFwui0VBnP2HjIzeuEoKDtKWAqAl7CoTpR_HrzEi5kIZol9BJZwtdW_I2cgNsqUhtb98a5V&SOURCEID=Sitio%20Seguro"
+        title="Seguro para motos"
+        description="Cotizá tu seguro de moto de forma online con los mejores precios."
+      />
+      <SecureCard
+        foto={accidentesSeguro}
+        altFoto="seguro accidentes personales"
+        buttonText="Más información"
+        buttonHref="https://www.sancristobal.com.ar/pas/rj-seguros-generales/seguro-accidentes-personales/cotizar"
+        title="Accidentes personales"
+        description="¿Buscas cotizar tu seguro de accidentes personales online y al mejor precio?"
+      />
+      <SecureCard
+        foto={comercioSeguro}
+        altFoto="seguro integral de comercio"
+        buttonText="Más información"
+        buttonHref="https://www.sancristobal.com.ar/otros-riesgos/integral-de-comercio?token=njXRQnZo4tf5SyZuT3okfRtu7OjRng6AujHhiswLiPLFyZPZSkBgxDdooK_AISTvwx-FZzk4mQHUn7Y_3WE1UymxapPTf41ZXOfV-xxEpx-zZZ0XNIckk6RgGOd4Ub2HQG_QShMP448CVUTq8vviCDYqYIG-KYVTVKTTvI6xEmTV1ThyveBG7o8cCuFwui0VBnP2HjIzeuEoKDtKWAqAl7CoTpR_HrzEi5kIZol9BJZwtdW_I2cgNsqUhtb98a5V&SOURCEID=Sitio%20Seguro"
+        title="Seguro de comercio"
+        description="El mejor seguro integral de comercio, a solo un click de distancia."
+      />
+      <SecureCard
+        foto={ahorrosSeguro}
+        altFoto="seguro de retiro"
+        buttonText="Más información"
+        buttonHref="https://www.sancristobal.com.ar/pas/rj-seguros-generales/seguros-de-retiro/cotizar"
+        title="Seguro de retiro"
+        description="Los mejores seguros de retiro y ahorro en Argentina. Utilizá nuestro simulador."
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div2 {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .div3 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .div4 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .div5 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .div6 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+</style>

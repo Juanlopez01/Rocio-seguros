@@ -1,0 +1,34 @@
+---
+import Image from "astro/components/Image.astro";
+import foto from "../../public/images/rocio-jara.png";
+import ContactForm from "../components/ContactForm";
+---
+
+<section
+  class="flex w-full place-content-center place-items-center gap-[10%] overflow-hidden bg-[#D4D4D4] p-4 max-md:flex-col max-md:px-2 lg:px-[10%]"
+  id="contact"
+>
+  <article
+    class="flex flex-col justify-center items-center text-center gap-5 h-[450px] w-[350px] overflow-hidden max-[822px]:hidden"
+  >
+    <Image
+      src={foto}
+      alt="rocio jara aseguradora"
+      class="w-[200px] h-[200px] max-h-[250px] max-w-[250px]"
+    />
+    <div class="flex flex-col gap-2">
+      <h2 class="text-3xl font-bold">Rocio Emilce Jara</h2>
+      <h3 class="text-xl font-semibold">Productora Asesora de Seguros</h3>
+    </div>
+    <div class="flex flex-col gap-2">
+      <h4>
+        Dedicada al asesoramiento y venta integral de seguros para empresas e
+        individuos.
+      </h4>
+      <h5>MN° <span class="font-bold">101566</span></h5>
+    </div>
+  </article>
+  <div>
+    <ContactForm />
+  </div>
+</section>

@@ -1,0 +1,11 @@
+---
+const { textButton, hrefLink } = Astro.props;
+---
+
+<a
+  class="cursor-pointer bg-[#04ABCB] text-[#00282F] text-lg font-semibold px-6 my-[0.80rem] rounded-3xl"
+  href={hrefLink}
+  target="_blank"
+>
+  <span>{textButton}</span>
+</a>
