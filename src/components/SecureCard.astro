@@ -6,7 +6,7 @@ const { foto, altFoto, buttonText, buttonHref, title, description } =
 ---
 
 <article
-  class="flex h-[150px] max-[490px]:h-[250px] max-w-[450px] rounded-xl bg-[#F3F2F2] mx-2 my-3 drop-shadow-xl shadow-black shadow-md"
+  class="flex h-[150px] max-[490px]:h-[200px] max-w-[450px] rounded-xl bg-[#F3F2F2] mx-2 my-3 drop-shadow-xl shadow-black shadow-md"
 >
   <div class="m-4 flex flex-col justify-between max-[490px]:items-center">
     <h3 class="text-xl font-semibold">{title}</h3>
@@ -14,7 +14,7 @@ const { foto, altFoto, buttonText, buttonHref, title, description } =
       {description}
     </h4>
     <a
-      class="cursor-pointer bg-[#04ABCB] text-[#00282F] text-lg font-semibold px-6 py-1 max-w-fit rounded-3xl"
+      class="cursor-pointer bg-[#04ABCB] text-[#00282F] hover:bg-[#236a78f8] focus:bg-[#236a78f8] transition-colors hover:text-white focus:text-white text-lg font-semibold px-6 py-1 max-w-fit rounded-3xl"
       href={buttonHref}
       target="_blank"
     >
@@ -25,6 +25,6 @@ const { foto, altFoto, buttonText, buttonHref, title, description } =
     src={foto}
     alt={altFoto}
     class="min-h-[100px] max-h-[150px] max-[490px]:hidden"
-    loading="lazy"
+    loading="eager"
   />
 </article>

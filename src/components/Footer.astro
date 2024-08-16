@@ -13,37 +13,50 @@ import appstore from "../../public/images/appstore.png";
     <h2 class="text-xl">Rocio Jara Seguros</h2>
     <div>
       <h3>Villa Ángela, Chaco, Argentina</h3>
-      <h4>Email: <a>jararociosg@gmail.com</a></h4>
+      <h4>
+        Email: <a href="mailto:jararociosg@gmail.com" class="border-b-2"
+          >jararociosg@gmail.com</a
+        >
+      </h4>
     </div>
   </div>
 
   <div class="flex h-full w-[250px] flex-col gap-4">
     <h2 class="text-2xl font-semibold max-md:text-xl">Preguntas frecuentes</h2>
     <div class="flex flex-col gap-3 max-md:text-sm">
-      <a href="" class="footer-link">¿Qué es una franquicia?</a>
-      <a href="" class="footer-link">¿Cómo actuar antes un siniestro?</a>
-      <a href="" class="footer-link">Reclamo de terceros</a>
-      <a href="" class="footer-link">Talleres de la Red</a>
+      <a
+        href="https://www.sancristobal.com.ar/preguntas-frecuentes/seguros-para-personas#automotor"
+        target="_blank"
+        class="footer-link">¿Qué es una franquicia?</a
+      >
+      <a
+        href="https://www.sancristobal.com.ar/ayuda-en-caso-de-siniestro"
+        target="_blank"
+        class="footer-link">¿Cómo actuar antes un siniestro?</a
+      >
+      <a href="https://www.sancristobal.com.ar/como-proceder-reclamos-terceros-auto/" target="_blank" class="footer-link">Reclamo de terceros</a>
+      <a href="https://www.sancristobal.com.ar/institucional/solucion-express" target="_blank" class="footer-link">Talleres de la Red</a>
       <a href="" class="footer-link">Seguro para agricultores</a>
     </div>
   </div>
 
   <div class="flex h-full max-w-[350px] flex-col gap-4">
     <h2 class="text-3xl max-md:text-xl">Autogestión</h2>
-    <h3>Asistencia 24hs <a class="font-semibold">0810 222 8887</a></h3>
+    <h3>Asistencia 24hs <a href="tel:08102228887" class="font-semibold">0810 222 8887</a></h3>
     <a
-      href=""
+      href="https://autogestion.sancristobal.com.ar/ingresar"
+      target="_blank"
       class="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-semibold text-black transition-all duration-200 bg-[#04ABCB] border border-transparent rounded-full focus:outline-none hover:bg-[#236a78f8] focus:bg-[#236a78f8]"
     >
       Sitio de Autogestión del Asegurado
     </a>
     <h5>Descargá la app de San Cristóbal</h5>
     <div class="flex max-md:flex-col gap-3 items-center md:justify-center">
-      <a class="w-1/2 md:w-1/3 cursor-pointer">
-        <Image src={playstore} alt="playstore link" />
+      <a class="w-1/2 md:w-1/3 cursor-pointer" href="https://play.google.com/store/apps/details?id=com.SBI.SanCristobalApp&hl=es" target="_blank">
+        <Image src={playstore} alt="playstore link" loading={"lazy"} />
       </a>
-      <a class="w-1/2 md:w-1/3 cursor-pointer">
-        <Image src={appstore} alt="appstore link" />
+      <a class="w-1/2 md:w-1/3 cursor-pointer" href="https://itunes.apple.com/ar/app/san-crist%C3%B3bal-seguros/id1169552320?l=en&mt=8" target="_blank">
+        <Image src={appstore} alt="appstore link" loading={"lazy"} />
       </a>
     </div>
   </div>
