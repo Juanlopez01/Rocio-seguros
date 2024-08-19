@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 type Props = {}
 
-export default function ContactForm({}: Props) {
+export default async function ContactForm({}: Props) {
 
   const SERVICE_ID = import.meta.env.PUBLIC_SERVICE_ID
   const TEMPLATE_ID = import.meta.env.PUBLIC_TEMPLATE_ID
@@ -42,7 +42,7 @@ export default function ContactForm({}: Props) {
             consult: ''
           })
         },
-        (error) => {
+        () => {
           Swal.fire({
             title: 'Tu consulta no se pudo enviar',
             text: 'Por favor intenta de nuevo',
