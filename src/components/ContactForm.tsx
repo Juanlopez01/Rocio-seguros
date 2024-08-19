@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 type Props = {}
 
-export default async function ContactForm({}: Props) {
+export default function ContactForm({}: Props) {
 
   const SERVICE_ID = import.meta.env.PUBLIC_SERVICE_ID
   const TEMPLATE_ID = import.meta.env.PUBLIC_TEMPLATE_ID
