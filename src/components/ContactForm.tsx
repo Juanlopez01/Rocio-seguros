@@ -1,8 +1,64 @@
 import React from 'react'
-
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 type Props = {}
 
 export default function ContactForm({}: Props) {
+
+  const SERVICE_ID = import.meta.env.PUBLIC_SERVICE_ID
+  const TEMPLATE_ID = import.meta.env.PUBLIC_TEMPLATE_ID
+  const PUBLIC_KEY = import.meta.env.PUBLIC_KEY
+  const [formData, setFormData] = React.useState({
+    name: '',
+    email: '',
+    consult: ''
+  }) 
+  const handleChange = (e: any) => {
+      const {target } = e
+      const {name, value} = target
+
+      const newData = {...formData, [name]: value}
+
+      setFormData(newData)
+  }
+  const sendEmail = (e : any) => {
+    e.preventDefault();
+
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, formData, {
+        publicKey: PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          Swal.fire({
+            title: 'Consulta enviada correctamente',
+            text: 'Nos pondremos en contacto a la brevedad',
+            icon: 'success',
+            confirmButtonText: 'Genial!'
+          })
+          setFormData({
+            name: '',
+            email: '',
+            consult: ''
+          })
+        },
+        (error) => {
+          Swal.fire({
+            title: 'Tu consulta no se pudo enviar',
+            text: 'Por favor intenta de nuevo',
+            icon: 'warning',
+            confirmButtonText: 'Intentar otra vez'
+          })
+          setFormData({
+            name: '',
+            email: '',
+            consult: ''
+          })
+        },
+      );
+  };
+
+
   return (
 <div className="lg:pl-12">
         <div className="overflow-hidden bg-[#021F25] rounded-md">
@@ -12,17 +68,19 @@ export default function ContactForm({}: Props) {
                 Obtené los seguros al mejor precio del mercado.
             </p>
 
-            <form action="#" method="POST" className="mt-4">
+            <form  onSubmit={sendEmail}  className="mt-4">
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="" className="text-base font-medium text-white">
+                  <label className="text-base font-medium text-white">
                     Nombre
                   </label>
                   <div className="mt-2.5 relative">
                     <input
                       type="text"
-                      name=""
-                      id=""
+                      name="name"
+                      id="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       placeholder="Escribe tu nombre"
                       className="block w-full px-4 py-4 text-[#04ABCB] placeholder-gray-500 transition-all duration-200 bg-transparent border border-[#04ABCB] rounded-md focus:outline-none focus:ring-[#04ABCB] focus:border-[#04ABCB] caret-[#04ABCB]"
                     />
@@ -30,14 +88,16 @@ export default function ContactForm({}: Props) {
                 </div>
 
                 <div>
-                  <label htmlFor="" className="text-base font-medium text-white">
+                  <label  className="text-base font-medium text-white">
                     Email
                   </label>
                   <div className="mt-2.5 relative">
                     <input
                       type="text"
-                      name=""
-                      id=""
+                      name="email"
+                      id="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       placeholder="Escribe tu email"
                       className="block w-full px-4 py-4 text-[#04ABCB] placeholder-gray-500 transition-all duration-200 bg-transparent border border-[#04ABCB] rounded-md focus:outline-none focus:ring-[#04ABCB] focus:border-[#04ABCB] caret-[#04ABCB]"
                     />
@@ -45,14 +105,16 @@ export default function ContactForm({}: Props) {
                 </div>
 
                 <div>
-                  <label htmlFor="" className="text-base font-medium text-white">
+                  <label  className="text-base font-medium text-white">
                     Consulta
                   </label>
                   <div className="mt-2.5 relative">
                     <textarea
-                      name=""
-                      id=""
+                      name="consult"
+                      id="consult"
                       placeholder="Deje su consulta"
+                      value={formData.consult}
+                      onChange={handleChange}
                       className="block w-full px-4 py-4 text-[#04ABCB] placeholder-gray-500 transition-all duration-200 bg-transparent border border-[#04ABCB] rounded-md focus:outline-none focus:ring-[#04ABCB] focus:border-[#04ABCB] caret-[#04ABCB]"
                       rows={4}></textarea>
                   </div>
