@@ -1,13 +1,9 @@
 
 import Swal from 'sweetalert2'
-import CyberMonay from '/src/images/CyberMonday.jpg'
-import {Image} from 'astro:assets'
+
 const PopUp = () => {
-  const imagePopUp = <>
-  <Image src={CyberMonay} alt='CyberMonday'/>
-  </>
   Swal.fire({
-    html: `${imagePopUp}`, 
+    html: '<img src=/src/images/CyberMonday.jpg />',
     showConfirmButton: false,
     showCloseButton: true,
 
