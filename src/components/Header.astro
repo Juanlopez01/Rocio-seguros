@@ -1,8 +1,9 @@
 ---
 import { Image } from "astro:assets";
 import ButtonPrimary from "./ButtonPrimary.astro";
-import logo from "../../public/images/rocio_logo.png";
+import logo from "/src/images/rocio_logo.png";
 import HamburguerMenu from "./HamburguerMenu";
+import PopUp from "./PopUp";
 ---
 
 <header
@@ -54,4 +55,6 @@ import HamburguerMenu from "./HamburguerMenu";
 
   {/*Hamburguer menu */}
   <HamburguerMenu client:only="react" />
+  {/*Pop Up */}
+  <PopUp client:only="react" />
 </header>
