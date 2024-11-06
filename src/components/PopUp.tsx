@@ -3,7 +3,7 @@ import Swal from 'sweetalert2'
 
 const PopUp = () => {
   Swal.fire({
-    html: '<img src=/src/images/CyberMonday.jpg />',
+    html: '<img src=./img/cyberMonday.jpg />',
     showConfirmButton: false,
     showCloseButton: true,
 
