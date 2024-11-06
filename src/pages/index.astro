@@ -57,14 +57,17 @@ import Footer from "../components/Footer.astro";
       });
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11461589122">
-    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-11461589122"></script>
     <script type="text/partytown">
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'AW-11461589122');
+      gtag("config", "AW-11461589122");
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -81,7 +84,7 @@ import Footer from "../components/Footer.astro";
 
     <link
       rel="shortcut icon"
-      href="/images/rocio_logo.png"
+      href="/src/images/rocio_logo.png"
       type="image/x-icon"
     />
   </head>
